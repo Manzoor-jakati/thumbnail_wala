@@ -1,5 +1,8 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import ThumbnailCard from "@/components/ThumbnailCard";
+import ThumbnailModal from "@/components/ThumbnailModal";
+import ReviewBar from "@/components/ReviewBar";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
@@ -19,7 +22,20 @@ const thumbnails = [
   { image: thumbnail6, title: "Music Reaction", category: "Entertainment", price: 80 },
 ];
 
+type ThumbnailData = typeof thumbnails[number];
+
 const Index = () => {
+  const [selectedThumbnail, setSelectedThumbnail] = useState<ThumbnailData | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleThumbnailClick = (thumbnail: ThumbnailData) => {
+    setSelectedThumbnail(thumbnail);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -78,11 +94,15 @@ const Index = () => {
                 title={thumb.title}
                 category={thumb.category}
                 price={thumb.price}
+                onClick={() => handleThumbnailClick(thumb)}
               />
             ))}
           </div>
         </div>
       </section>
+
+      {/* Continuous Review Bar */}
+      <ReviewBar />
 
       {/* Pricing Section */}
       <section id="pricing" className="border-y-2 border-border bg-secondary py-20">
@@ -186,6 +206,15 @@ const Index = () => {
 
       {/* Footer */}
       <Footer />
+
+      {/* Thumbnail Modal */}
+      <ThumbnailModal
+        thumbnail={selectedThumbnail}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        allThumbnails={thumbnails}
+        onSelectThumbnail={handleThumbnailClick}
+      />
     </div>
   );
 };
