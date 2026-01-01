@@ -5,16 +5,18 @@ interface ThumbnailCardProps {
   title: string;
   category: string;
   price: number;
+  onClick?: () => void;
 }
 
-const ThumbnailCard = ({ image, title, category, price }: ThumbnailCardProps) => {
+const ThumbnailCard = ({ image, title, category, price, onClick }: ThumbnailCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      className="group relative overflow-hidden border-2 border-border bg-card transition-all duration-300 ease-out hover:shadow-md hover:-translate-y-1"
+      className="group relative cursor-pointer overflow-hidden border-2 border-border bg-card transition-all duration-300 ease-out hover:shadow-md hover:-translate-y-1"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
     >
       {/* Image Container */}
       <div className="relative aspect-video overflow-hidden">
