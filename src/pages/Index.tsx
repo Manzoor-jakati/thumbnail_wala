@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Header from "@/components/Header";
+import CategoryIcons from "@/components/CategoryIcons";
 import ThumbnailCard from "@/components/ThumbnailCard";
 import ThumbnailModal from "@/components/ThumbnailModal";
 import ReviewBar from "@/components/ReviewBar";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
-
 import thumbnail1 from "@/assets/thumbnail-1.jpg";
 import thumbnail2 from "@/assets/thumbnail-2.jpg";
 import thumbnail3 from "@/assets/thumbnail-3.jpg";
@@ -73,6 +73,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Category Icons */}
+      <CategoryIcons />
+
       {/* Gallery Section */}
       <section id="work" className="py-20">
         <div className="container mx-auto px-6">
@@ -85,8 +88,8 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Thumbnail Grid */}
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {/* Thumbnail Grid - 3 columns */}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {thumbnails.map((thumb, index) => (
               <ThumbnailCard
                 key={index}
