@@ -61,7 +61,7 @@ const ThumbnailModal = ({ thumbnail, isOpen, onClose, allThumbnails, onSelectThu
                 </DialogTitle>
               </DialogHeader>
 
-              <p className="mb-4 text-2xl font-bold text-foreground">${thumbnail.price}</p>
+              <p className="mb-4 text-2xl font-bold text-foreground">₹{thumbnail.price}</p>
               <p className="mb-6 text-sm text-muted-foreground">
                 High-quality, custom-designed thumbnail optimized for maximum click-through rate. Includes source files and unlimited revisions.
               </p>

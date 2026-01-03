@@ -12,6 +12,8 @@ import thumbnail3 from "@/assets/thumbnail-3.jpg";
 import thumbnail4 from "@/assets/thumbnail-4.jpg";
 import thumbnail5 from "@/assets/thumbnail-5.jpg";
 import thumbnail6 from "@/assets/thumbnail-6.jpg";
+import thumbnail7 from "@/assets/thumbnail-7.png";
+
 
 const thumbnails = [
   { image: thumbnail1, title: "Tech Review", category: "Tech", price: 75 },
@@ -20,6 +22,7 @@ const thumbnails = [
   { image: thumbnail4, title: "Business Talk", category: "Business", price: 95 },
   { image: thumbnail5, title: "Cooking Tutorial", category: "Food", price: 70 },
   { image: thumbnail6, title: "Music Reaction", category: "Entertainment", price: 80 },
+  { image: thumbnail7, title: "Tech Review", category: "Entertainment", price: 300 },
 ];
 
 type ThumbnailData = typeof thumbnails[number];
