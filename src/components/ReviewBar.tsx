@@ -1,13 +1,13 @@
 import { Star } from "lucide-react";
 
 const reviews = [
-  { name: "Mahesh D.", text: "CTR increased by 20%!", rating: 4.5 },
+  { name: "Mahesh D.", text: "CTR increased by 20%!", rating: 5 },
   { name: "Sarah K.", text: "Super fast delivery", rating: 5 },
-  { name: "Md Rehan R.", text: "Professional results", rating: 4.8 },
+  { name: "Md Rehan R.", text: "Professional results", rating: 5 },
   { name: "Joker T.", text: "Best thumbnail designer", rating: 5 },
   { name: "Emma W.", text: "Exceeded expectations", rating: 5 },
-  { name: "dhruv R.", text: "Highly recommend!", rating: 4.7 },
-  { name: "Laxman S.", text: "Amazing attention to detail", rating: 4.9 },
+  { name: "dhruv R.", text: "Highly recommend!", rating: 5 },
+  { name: "Laxman S.", text: "Amazing attention to detail", rating: 5 },
   { name: "David H.", text: "Quick turnaround time", rating: 5 },
 ];
 
